@@ -1,0 +1,433 @@
+* {
+  font-family: "Raleway", sans-serif, Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #e5e5e5;
+}
+
+/* left profile  */
+
+.profile {
+  height: 100%;
+  width: 313px;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  box-shadow: 4px 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-weight: bold;
+  background-color: #fafafa;
+}
+
+.profile-pic {
+  width: 163px;
+  height: 163px;
+  border-radius: 80px;
+  margin-top: 105px;
+  cursor: pointer;
+  background: red;
+}
+
+.welcome-text {
+  font-size: 16px;
+  margin-top: 22px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.books-status {
+  margin-top: 47px;
+  justify-content: center;
+  display: flex;
+}
+
+.status-item {
+  font-size: 12px;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.item-value {
+  font-size: 24px;
+}
+
+.normal-btn {
+  border: none;
+  padding: 4px 35px;
+  background: linear-gradient(
+    90deg,
+    #6a77bd 31.12%,
+    rgba(43, 74, 238, 0) 141.96%
+  );
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  margin-top: 74px;
+  margin-right: 5px;
+}
+
+.normal-btn:active {
+  transform: translateY(1px);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.copyright-content {
+  position: fixed;
+  bottom: 0;
+  width: inherit;
+  font-size: 9px;
+  text-align: right;
+  padding: 15px 0px 15px 0px;
+  color: gray;
+  border-top: solid 1px rgba(0, 0, 0, 0.25);
+}
+
+/* left main screen */
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 44px 313px 0px 74px;
+}
+
+.read-books-section {
+  grid-column: 1 / 3;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.item-container-above {
+  display: flex;
+  max-width: 400px;
+  flex-wrap: wrap;
+  margin-top: 43px;
+}
+
+.item-container-below {
+  display: flex;
+  max-width: 800px;
+  flex-wrap: wrap;
+  margin-top: 43px;
+}
+
+.book-image-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.book-image-container:hover .book-image-overlay {
+  opacity: 1;
+}
+
+.book-image-container:hover .bubble {
+  transform: unset;
+  opacity: 1;
+}
+
+.book-image-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: ease 0.5s;
+  height: 150px;
+  width: 100px;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.mini-btn {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 80px;
+  border: none;
+  margin: 5px;
+}
+
+.mini-btn:hover {
+  background: linear-gradient(
+    90deg,
+    #6a77bd 31.12%,
+    rgba(43, 74, 238, 0) 141.96%
+  );
+  color: white;
+}
+
+.mini-btn:active {
+  transform: translateY(1px);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* buble */
+.bubble {
+  transition: opacity ease 0.5s;
+  transform: translateY(-5000px);
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 110px;
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  color: white;
+  padding: 24px;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  z-index: 1;
+}
+
+.bubble::after {
+  position: absolute;
+  content: "";
+  border-color: transparent rgba(0, 0, 0, 0.7) transparent transparent;
+  border-width: 8px;
+  border-style: solid;
+  left: -16px;
+  top: 50px;
+}
+
+.bubble-pages {
+  font-size: 12px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 24px;
+}
+
+.bubble-author {
+  font-size: 12px;
+}
+
+.bubble-title {
+  font-size: 16px;
+  color: white;
+}
+
+.bubble-title1 {
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 30px;
+  font-size: 12px;
+}
+
+.bubble-learned {
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.book-item {
+  margin-bottom: 30px;
+  margin-right: 30px;
+  max-width: 100px;
+}
+
+.book-image {
+  width: 100px;
+  height: 150px;
+  border-radius: 3px;
+}
+
+.book-name {
+  margin-top: 13px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.book-author {
+  font-size: 11px;
+}
+
+.rating {
+  font-size: 11px;
+}
+
+.rating i {
+  color: #333333;
+  margin-right: 2px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.rating i.yellow {
+  color: #f7b500;
+}
+
+/* new book ui */
+
+.add-book-overlay {
+  position: fixed;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+
+.add-book {
+  position: fixed;
+  right: -70%;
+  top: 0;
+  width: 30%;
+  height: 100%;
+  background-color: white;
+  padding: 20px 60px;
+  transition: all 400ms ease;
+  opacity: 0;
+}
+
+.book-form {
+  margin-top: 5%;
+}
+
+.show-add-book {
+  right: 0;
+  opacity: 1;
+}
+
+.show-add-book-overlay {
+  left: 0;
+  opacity: 1;
+}
+
+.add-book-head {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.add-book-subhead {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.horizontal-form {
+  margin: 20px 0px;
+  /* width: 530px; */
+  /* width: 100%; */
+  display: flex;
+}
+
+.horizontal-form .pages {
+  display: flex;
+  margin-left: 20px;
+}
+
+.pages p {
+  margin-right: 15px;
+  margin-top: 10px;
+}
+
+.horizontal-form .checkbox {
+  display: flex;
+}
+
+.checkbox p {
+  margin-top: 10px;
+}
+
+.checkbox input[type="checkbox"] {
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+input[type="number"] {
+  background-color: #eaeaea;
+  border: none;
+  width: 50%;
+  height: 10px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+input[type="text"] {
+  margin-top: 9px;
+  background-color: #eaeaea;
+  border: none;
+  width: 100%;
+  height: 5px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.book-form textarea {
+  background-color: #eaeaea;
+  border: none;
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  resize: none;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.new-book-rating {
+  text-align: center;
+  margin-top: 26px;
+}
+
+.new-book-rating i {
+  color: #333333;
+  font-size: 24px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* got these from css tricks https://css-tricks.com/star-ratings/ only get what is needed*/
+
+/* reverse the direction */
+.new-book-rating {
+  direction: rtl;
+}
+/* activate by hover, select all from hover to end of hovered i */
+.new-book-rating i:hover::before,
+.new-book-rating > i:hover ~ i::before {
+  color: #f7b500;
+}
+
+.book-form-buttons {
+  margin-top: 0px;
+  text-align: center;
+}
+
+.cancel-btn {
+  background: linear-gradient(
+    90deg,
+    #bd6a6a 31.12%,
+    rgba(238, 43, 43, 0) 141.96%
+  );
+}
+
+#add-book {
+  margin-top: 20px;
+}
+
+#cancel-book {
+  margin-top: 20px;
+}

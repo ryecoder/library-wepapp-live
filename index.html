@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Library Web App</title>
+  </head>
+
+  <body>
+    <!-- main side -->
+
+    <div class="main-container">
+      <!-- unread books section -->
+      <div class="unread-books-section">
+        <p class="section-title">Unread Books</p>
+
+        <div class="item-container-above">
+          <!-- books will be loaded here -->
+        </div>
+      </div>
+
+      <!-- liked books section -->
+      <div class="liked-books-section">
+        <p class="section-title">Liked Books</p>
+
+        <div class="item-container-above">
+          <!-- books will be loaded here -->
+        </div>
+      </div>
+
+      <!-- read books section -->
+      <div class="read-books-section">
+        <p class="section-title">Read Books</p>
+
+        <div class="item-container-below">
+          <!-- books will be loaded here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- side bar profile -->
+    <div class="profile">
+      <img class="profile-pic" src="images/profile-photo.png" alt="" />
+      <div class="welcome-text">
+        <p>Welcome back!</p>
+      </div>
+      <div class="books-status">
+        <div class="status-item">
+          <p class="item-value" id="total-books">10</p>
+          <p>Total Books</p>
+        </div>
+        <div class="status-item">
+          <p class="item-value" id="total-read">5</p>
+          <p>Read</p>
+        </div>
+        <div class="status-item">
+          <p class="item-value" id="total-unread">3</p>
+          <p>Unread</p>
+        </div>
+      </div>
+      <button class="normal-btn" id="add-book-toggle">Add book</button>
+      <div class="copyright-content">
+        <p>By: RyeCoder</p>
+        <p>For The Odin Project Curriculum 2019</p>
+      </div>
+    </div>
+
+    <!-- add book ui -->
+
+    <div class="add-book-ui">
+      <div class="add-book-overlay"></div>
+      <div class="add-book">
+        <form action="" class="book-form">
+          <p class="add-book-head">Add a book</p>
+          <p class="add-book-subhead">Title</p>
+          <input type="text" name="title" id="book-title" required />
+          <p class="add-book-subhead">Author</p>
+          <input type="text" name="author" id="book-author" required />
+          <p class="add-book-subhead">Book Cover Url</p>
+          <input type="text" name="cover" id="book-cover" required />
+
+          <div class="horizontal-form">
+            <div class="checkbox">
+              <input type="checkbox" name="read" id="book-read" />
+              <p>Read</p>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="liked" id="book-liked" />
+              <p>Liked</p>
+            </div>
+            <div class="pages">
+              <p class="add-book-subhead">Pages</p>
+              <input type="number" name="pages" id="book-pages" required />
+            </div>
+          </div>
+
+          <p class="add-book-subhead">What you've learned</p>
+          <textarea
+            name="learned"
+            id="book-learned"
+            cols="40"
+            rows="5"
+          ></textarea>
+
+          <div class="new-book-rating">
+            <i class="fa fa-star" data-value="5"></i>
+            <i class="fa fa-star" data-value="4"></i>
+            <i class="fa fa-star" data-value="3"></i>
+            <i class="fa fa-star" data-value="2"></i>
+            <i class="fa fa-star" data-value="1 "></i>
+            <p>Rate it</p>
+          </div>
+          <div class="book-form-buttons">
+            <button class="normal-btn" id="add-book">Add book</button>
+            <button class="normal-btn cancel-btn" id="cancel-book">
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script src="js/index.js"></script>
+  </body>
+</html>
