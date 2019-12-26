@@ -69,16 +69,30 @@ function saveToStorage() {
   localStorage.setItem("libraryStorage", JSON.stringify(libraryStorage));
 }
 
-// book object
-function Book(title, author, pages, cover, wyl, rating, liked, read) {
-  this.title = title; // string
-  this.author = author; // string
-  this.pages = pages; // number
-  this.cover = cover; // string
-  this.wyl = wyl; // string
-  this.rating = rating; // number
-  this.liked = liked; // bool
-  this.read = read; // bool
+// // book object
+// function Book(title, author, pages, cover, wyl, rating, liked, read) {
+//   this.title = title; // string
+//   this.author = author; // string
+//   this.pages = pages; // number
+//   this.cover = cover; // string
+//   this.wyl = wyl; // string
+//   this.rating = rating; // number
+//   this.liked = liked; // bool
+//   this.read = read; // bool
+// }
+
+// Book object refactored to class syntax
+class Book {
+  constructor(title, author, pages, cover, wyl, rating, liked, read) {
+    this.title = title; // string
+    this.author = author; // string
+    this.pages = pages; // number
+    this.cover = cover; // string
+    this.wyl = wyl; // string
+    this.rating = rating; // number
+    this.liked = liked; // bool
+    this.read = read; // bool
+  }
 }
 
 // add book to storage
